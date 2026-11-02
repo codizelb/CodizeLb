@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{@apply bg-brand-bg text-brand-text antialiased overflow-x-hidden font-body;padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,h3{@apply font-display}
+img{max-width:100%}
+@layer components{
+ .wrap{@apply mx-auto w-full max-w-[1180px] px-5}
+ .btn{@apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border border-transparent px-6 py-3 text-[15px] font-medium transition duration-300 disabled:opacity-60}
+ .btn-primary{@apply bg-brand-grad text-[#04140d] shadow-glow hover:-translate-y-0.5}
+ .btn-ghost{@apply border-brand-line bg-white/[.03] hover:border-brand-mint/60 hover:bg-brand-mint/5}
+ .kicker{@apply flex items-center gap-2 text-sm text-brand-muted}
+ .kicker::before{content:'';@apply block h-2 w-2 rounded-sm bg-brand-mint}
+ .rule{@apply border-brand-line}
+ .input{@apply w-full rounded-lg border border-brand-line bg-brand-bg/70 px-3.5 py-3 text-[15px] text-brand-text transition focus:border-brand-mint focus:outline-none focus:ring-2 focus:ring-brand-mint/20}
+}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}

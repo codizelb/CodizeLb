@@ -1,0 +1,443 @@
+{
+  "site": {
+    "name": "Codize",
+    "blurb": "A web development studio building fast, scalable and modern digital products.",
+    "email": "hello@example.com",
+    "phone": "+000 00 000 000",
+    "location": "Your City, Country",
+    "social": [
+      {
+        "label": "linkedin",
+        "url": "#",
+        "title": "LinkedIn"
+      },
+      {
+        "label": "github",
+        "url": "#",
+        "title": "GitHub"
+      },
+      {
+        "label": "twitter",
+        "url": "#",
+        "title": "X"
+      },
+      {
+        "label": "instagram",
+        "url": "#",
+        "title": "Instagram"
+      }
+    ],
+    "logo": "/logo.png"
+  },
+  "stats": [
+    {
+      "value": 50,
+      "suffix": "+",
+      "label": "Projects delivered"
+    },
+    {
+      "value": 30,
+      "suffix": "+",
+      "label": "Happy clients"
+    },
+    {
+      "value": 99,
+      "suffix": "%",
+      "label": "Client satisfaction"
+    },
+    {
+      "value": 24,
+      "suffix": "/7",
+      "label": "Support"
+    }
+  ],
+  "services": [
+    {
+      "icon": "code",
+      "title": "Website Development",
+      "description": "Modern, responsive and high-performance websites."
+    },
+    {
+      "icon": "app",
+      "title": "Web Applications",
+      "description": "Custom web applications designed around business requirements."
+    },
+    {
+      "icon": "cart",
+      "title": "E-Commerce",
+      "description": "Scalable online stores with modern shopping experiences."
+    },
+    {
+      "icon": "design",
+      "title": "UI/UX Design",
+      "description": "Clean interfaces and user experiences designed for real users."
+    },
+    {
+      "icon": "server",
+      "title": "Backend Development",
+      "description": "Secure APIs, databases and scalable backend systems."
+    },
+    {
+      "icon": "wrench",
+      "title": "Website Maintenance",
+      "description": "Updates, optimization, security and ongoing support."
+    }
+  ],
+  "why": [
+    {
+      "title": "Custom solutions",
+      "detail": "tailored to your goals"
+    },
+    {
+      "title": "Modern technology",
+      "detail": "current, maintainable stacks"
+    },
+    {
+      "title": "Responsive design",
+      "detail": "flawless on every screen"
+    },
+    {
+      "title": "Performance focused",
+      "detail": "fast loads, high scores"
+    },
+    {
+      "title": "Scalable architecture",
+      "detail": "ready for growth"
+    },
+    {
+      "title": "Clean code & support",
+      "detail": "documented, with ongoing care"
+    }
+  ],
+  "tech": [
+    {
+      "group": "Frontend",
+      "items": [
+        "React",
+        "Angular",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "group": "Backend",
+      "items": [
+        "Node.js",
+        "Python",
+        "REST APIs"
+      ]
+    },
+    {
+      "group": "Database",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "group": "Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "Docker"
+      ]
+    }
+  ],
+  "process": [
+    {
+      "title": "Discover",
+      "description": "Understand the business, goals and requirements."
+    },
+    {
+      "title": "Plan",
+      "description": "Define architecture, features and project roadmap."
+    },
+    {
+      "title": "Design",
+      "description": "Create the interface and user experience."
+    },
+    {
+      "title": "Develop",
+      "description": "Build the frontend, backend and integrations."
+    },
+    {
+      "title": "Launch",
+      "description": "Test, deploy and provide ongoing support."
+    }
+  ],
+  "projects": [
+    {
+      "name": "E-Commerce Platform",
+      "category": "E-Commerce",
+      "description": "Storefront with cart, payments and admin dashboard.",
+      "tech": [
+        "React",
+        "Node.js",
+        "MySQL"
+      ],
+      "icon": "bag",
+      "url": "#contact",
+      "image": ""
+    },
+    {
+      "name": "Business Management System",
+      "category": "Web App",
+      "description": "Operations, invoicing and reporting in one place.",
+      "tech": [
+        "TypeScript",
+        "Node.js",
+        "MySQL"
+      ],
+      "icon": "boxes",
+      "url": "#contact",
+      "image": ""
+    },
+    {
+      "name": "Corporate Website",
+      "category": "Website",
+      "description": "Fast, SEO-ready brand website.",
+      "tech": [
+        "React",
+        "Tailwind CSS"
+      ],
+      "icon": "globe",
+      "url": "#contact",
+      "image": ""
+    },
+    {
+      "name": "SaaS Dashboard",
+      "category": "SaaS",
+      "description": "Analytics dashboard with role-based access.",
+      "tech": [
+        "React",
+        "REST",
+        "MySQL"
+      ],
+      "icon": "chart",
+      "url": "#contact",
+      "image": ""
+    },
+    {
+      "name": "Booking Platform",
+      "category": "Web App",
+      "description": "Real-time scheduling and reminders.",
+      "tech": [
+        "Node.js",
+        "MySQL"
+      ],
+      "icon": "calendar",
+      "url": "#contact",
+      "image": ""
+    },
+    {
+      "name": "Custom Web Application",
+      "category": "Custom",
+      "description": "Bespoke workflow tooling for a growing team.",
+      "tech": [
+        "Angular",
+        "Docker"
+      ],
+      "icon": "dashboard",
+      "url": "#contact",
+      "image": ""
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "They turned a vague idea into a polished product ahead of schedule.",
+      "name": "Sara Khalil",
+      "position": "CEO",
+      "company": "Sample Co."
+    },
+    {
+      "quote": "Communication was clear and the result performs beautifully.",
+      "name": "Omar Nasser",
+      "position": "Marketing Director",
+      "company": "Example Ltd."
+    },
+    {
+      "quote": "Our online sales grew noticeably after the new store launched.",
+      "name": "Lina Haddad",
+      "position": "Founder",
+      "company": "Demo Store"
+    }
+  ],
+  "faq": [
+    {
+      "q": "How does the development process work?",
+      "a": "We follow five steps: discover, plan, design, develop and launch, with regular check-ins throughout."
+    },
+    {
+      "q": "How long does a website take to build?",
+      "a": "Typically 2–6 weeks for a business website; larger applications are scoped after discovery."
+    },
+    {
+      "q": "Do you build custom web applications?",
+      "a": "Yes. We build custom apps around your workflows, from internal tools to customer-facing platforms."
+    },
+    {
+      "q": "Do you provide website maintenance?",
+      "a": "Yes — updates, security, optimization and ongoing support plans."
+    },
+    {
+      "q": "Can you redesign an existing website?",
+      "a": "Absolutely. We refresh design, performance and structure while keeping what works."
+    },
+    {
+      "q": "What technologies do you use?",
+      "a": "Mainly React, TypeScript, Node.js, Python and SQL/NoSQL databases, chosen per project."
+    },
+    {
+      "q": "How can I start a project?",
+      "a": "Send us a message using the contact form and we'll reply with next steps."
+    }
+  ],
+  "seo": {
+    "title": "Codize | Web Development & Digital Solutions",
+    "description": "We design and develop fast, scalable and modern websites and web applications that help businesses grow."
+  },
+  "hero": {
+    "eyebrow": "Web Development Studio",
+    "title": "We engineer digital products that",
+    "highlight": "move business forward.",
+    "subtitle": "We design and develop fast, scalable and modern websites and web applications that help businesses grow.",
+    "primaryCta": "Start a Project",
+    "secondaryCta": "View Our Work",
+    "tags": [
+      "Web Development",
+      "UI/UX",
+      "E-Commerce",
+      "Custom Software"
+    ],
+    "chips": [
+      "</> clean code",
+      "fast & scalable"
+    ]
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Process",
+      "href": "#process"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "sections": [
+    {
+      "id": "services",
+      "enabled": true,
+      "eyebrow": "Services",
+      "title": "What We Build",
+      "highlight": "",
+      "sub": "End-to-end digital solutions, from first sketch to long-term support."
+    },
+    {
+      "id": "why",
+      "enabled": true,
+      "eyebrow": "Why Choose Us",
+      "title": "Built to perform.",
+      "highlight": "Built to last.",
+      "sub": "We treat every project as a product, not a page."
+    },
+    {
+      "id": "tech",
+      "enabled": true,
+      "eyebrow": "Technologies",
+      "title": "Our Toolbox",
+      "highlight": "",
+      "sub": "Proven, modern tools chosen for speed, security and scale."
+    },
+    {
+      "id": "process",
+      "enabled": true,
+      "eyebrow": "Our Process",
+      "title": "From idea to launch",
+      "highlight": "",
+      "sub": ""
+    },
+    {
+      "id": "projects",
+      "enabled": true,
+      "eyebrow": "Portfolio",
+      "title": "Selected Projects",
+      "highlight": "",
+      "sub": "A look at the kinds of products we build."
+    },
+    {
+      "id": "about",
+      "enabled": true,
+      "eyebrow": "About",
+      "title": "Technology built around",
+      "highlight": "your business.",
+      "sub": "We combine design, development, strategy and technology to build practical digital products — not just websites. Every decision is tied to your goals, your users and your growth."
+    },
+    {
+      "id": "testimonials",
+      "enabled": true,
+      "eyebrow": "Testimonials",
+      "title": "What clients say",
+      "highlight": "",
+      "sub": ""
+    },
+    {
+      "id": "faq",
+      "enabled": true,
+      "eyebrow": "FAQ",
+      "title": "Common questions",
+      "highlight": "",
+      "sub": ""
+    },
+    {
+      "id": "contact",
+      "enabled": true,
+      "eyebrow": "Contact",
+      "title": "Have an idea?",
+      "highlight": "Let's build it.",
+      "sub": "Tell us about your project and let's turn your idea into a powerful digital experience."
+    }
+  ],
+  "pillars": [
+    {
+      "icon": "design",
+      "title": "Design",
+      "description": "Interfaces that convert"
+    },
+    {
+      "icon": "code",
+      "title": "Development",
+      "description": "Clean, scalable code"
+    },
+    {
+      "icon": "compass",
+      "title": "Strategy",
+      "description": "Goal-driven roadmaps"
+    },
+    {
+      "icon": "cpu",
+      "title": "Technology",
+      "description": "Modern, secure stacks"
+    }
+  ]
+}
