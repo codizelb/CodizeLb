@@ -23,12 +23,21 @@ const config = {
     password: e.DB_PASSWORD || '',
     name: e.DB_NAME || 'codize',
     // Local SQL Server usually uses a self-signed cert, so encrypt+trust are both needed for a local dev connection.
-    encrypt: e.DB_ENCRYPT === 'true',
-    trustServerCertificate: e.DB_TRUST_CERT !== 'false',
+    // Azure SQL (*.database.windows.net) requires an encrypted connection with a real certificate,
+    // so those two settings default correctly for it; for a local SQL Server they default to
+    // "no encryption, trust the self-signed cert". Either can still be forced via .env.
+    encrypt: e.DB_ENCRYPT ? e.DB_ENCRYPT === 'true' : /\.database\.windows\.net$/i.test(e.DB_SERVER || ''),
+    trustServerCertificate: e.DB_TRUST_CERT ? e.DB_TRUST_CERT !== 'false' : !/\.database\.windows\.net$/i.test(e.DB_SERVER || ''),
+    // Set DB_AUTO_CREATE=false when the database already exists (always the case on Azure SQL,
+    // where you create it in the portal): skips the CREATE DATABASE step that needs `master` access.
+    autoCreate: e.DB_AUTO_CREATE !== 'false',
+    retries: Number(e.DB_CONNECT_RETRIES) || 4,
+    retryDelayMs: Number(e.DB_RETRY_DELAY_MS) || 15000,
   },
   adminPassword: e.ADMIN_PASSWORD || 'changeme',
   secret: e.SECRET || crypto.randomBytes(32).toString('hex'),
-  uploadDir: path.join(__dirname, '..', '..', 'uploads'),
+  // UPLOAD_DIR lets you point uploads at a persistent disk/volume on hosts that wipe the app folder on redeploy.
+  uploadDir: e.UPLOAD_DIR || path.join(__dirname, '..', '..', 'uploads'),
   clientDist: path.join(__dirname, '..', '..', '..', 'client', 'dist'),
   // Email notifications for new contact-form messages. Optional — if SMTP_HOST is unset,
   // messages are still saved to the database, they just won't be emailed.
