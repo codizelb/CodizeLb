@@ -6,11 +6,11 @@ const { pool } = require('./db')
 initDb()
   .then(() => {
     const server = app.listen(port, () => console.log(`Codize server listening on http://localhost:${port}`))
-    // Graceful shutdown: on a process-manager restart/redeploy (pm2, Docker, systemd), finish
+    // Graceful shutdown: on a process-manager restart/redeploy (Render, Docker, systemd), finish
     // in-flight requests and close the database pool cleanly instead of dropping connections.
     const shutdown = signal => {
       console.log(`${signal} received, shutting down...`)
-      server.close(() => pool.close().finally(() => process.exit(0)))
+      server.close(() => pool.end().finally(() => process.exit(0)))
       setTimeout(() => process.exit(1), 10000).unref() // force-exit if something hangs
     }
     process.on('SIGTERM', () => shutdown('SIGTERM'))
@@ -18,16 +18,18 @@ initDb()
   })
   .catch(err => {
     console.error('Startup failed:', err.message)
-    if (err.code === 'ESOCKET' || /ECONNREFUSED/.test(err.message)) {
+    if (['ECONNREFUSED', 'ETIMEDOUT', 'ENOTFOUND', 'PROTOCOL_CONNECTION_LOST'].includes(err.code)) {
       console.error([
         '',
-        'Could not reach SQL Server. Common causes:',
-        '  1. server/.env does not exist yet — copy server/.env.example to server/.env and fill it in.',
-        '  2. SQL Server is a named instance (e.g. SQLEXPRESS) — set DB_INSTANCE in .env instead of DB_PORT,',
-        '     and make sure the "SQL Server Browser" Windows service is running.',
-        '  3. TCP/IP is disabled — enable it in SQL Server Configuration Manager > SQL Server Network',
-        '     Configuration > Protocols, then restart the SQL Server service.',
+        'Could not reach the MySQL server. Common causes:',
+        '  1. DB_HOST / DB_PORT are wrong (copy them from Aiven -> Service overview).',
+        '  2. Aiven "Allowed IP addresses" blocks this machine, or a free-plan service is powered off.',
+        '  3. The environment variables are missing — on Render set them in the dashboard; locally use server/.env.',
       ].join('\n'))
+    } else if (/SSL|certificate|self.signed/i.test(err.message)) {
+      console.error('\nTLS problem: set DB_SSL_CA to the contents of Aiven\'s CA certificate (ca.pem).')
+    } else if (err.code === 'ER_ACCESS_DENIED_ERROR') {
+      console.error('\nWrong DB_USER / DB_PASSWORD.')
     }
     process.exit(1)
   })
